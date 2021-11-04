@@ -37,7 +37,6 @@ class Actions(BaseActions):
     async def task_reader(self):
         while True:
             await asyncio.sleep(1)
-            print('yes')
             data = await self.queue.get()
             await self.process_data(data)
 

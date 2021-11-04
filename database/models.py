@@ -1,6 +1,7 @@
 from peewee import *
 
-db = SqliteDatabase("C:/Users/Chokeup/PycharmProjects/pythonProject9/services/calculation/db.db") # TODO - Изменить путь
+#TODO Изменить перед тем как показывать
+db = SqliteDatabase("C:/Users/Chokeup/PycharmProjects/pythonProject9/services/calculation/db.db")#T
 
 
 class User(Model):
@@ -16,7 +17,7 @@ class User(Model):
 
 
 class Category(Model):
-    name_of_category = CharField(max_length=25)
+    name_of_category = CharField(max_length=25,unique=True)
 
     class Meta:
         database = db
@@ -32,5 +33,7 @@ class Calculation(Model):
         database = db
 
 
+
+# Использовать DI?
 db.connect()
 db.create_tables([User, Category, Calculation])

@@ -1,9 +1,9 @@
-import random
 import unittest
-from database.actions.user_actions import UserActions
-from database.models import User
 import string
 import random
+
+from database.actions.user_actions import UserActions
+from database.models import User
 
 user_actions = UserActions()
 

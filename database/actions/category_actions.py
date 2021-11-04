@@ -12,10 +12,10 @@ class CategoryActions:
         return False
 
     @staticmethod
-    def get_categoryes_by_name(name_of_category):
+    def get_categories_by_name(name_of_category):
         return Category.select().where(Category.name_of_category == name_of_category).first()
 
     @staticmethod
     def get_all_categoryes():
-        categoryes = [category.name_of_category for category in Category.select()]
-        return categoryes
+        categories = [category.name_of_category for category in Category.select()]
+        return categories

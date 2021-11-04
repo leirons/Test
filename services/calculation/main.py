@@ -30,11 +30,11 @@ class Client:
             surname = input("Введите фамилию")
             email = input("Введите емайл")
             password = input("Пароль")
-            user = actions.create_user(name=name, surname=surname, email=email, password=password)
-        else:
-            user = self.log_in(user_actions=actions)
+            actions.create_user(name=name, surname=surname, email=email, password=password)
+            print('Теперь ввойдите')
+
+        user = self.log_in(user_actions=actions)
         session = Session(user)
-        print(session.get_user())
 
         queue = asyncio.Queue()
         z = Actions(queue, session)

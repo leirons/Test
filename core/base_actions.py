@@ -31,7 +31,7 @@ class BaseActions(BaseQueue):
             print(category_action.get_all_categoryes())
             category = input('Введите категорию, все существующие категории вы можете увидеть выше,'
                              'если их нет, то создайте.')
-            category = category_action.get_categoryes_by_name(category)
+            category = category_action.get_categories_by_name(category)
             price = int(input("Введите цену товара"))
             date = input(
                 "Введите время на когда добавить расход, или просто нажмите ентер если вам нужно текущее время\n"
